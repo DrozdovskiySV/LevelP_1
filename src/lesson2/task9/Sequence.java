@@ -1,4 +1,4 @@
-package lesson1.task9;
+package lesson2.task9;
 
 public class Sequence {
     //9. Создайте программу, выводящую на экран первые 20 элементов последовательности 2 4 8 16 32 64 128 ….

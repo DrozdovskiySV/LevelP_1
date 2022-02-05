@@ -1,4 +1,4 @@
-package lesson1.task6;
+package lesson2.task6;
 
 public class Sequence {
     public static void main(String[] args) {

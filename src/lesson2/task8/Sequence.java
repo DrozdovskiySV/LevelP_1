@@ -1,4 +1,4 @@
-package lesson1.task8;
+package lesson2.task8;
 
 public class Sequence {
     //8. Создайте программу, выводящую на экран все неотрицательные элементы последовательности 90 85 80 75 70 65 60 ….
