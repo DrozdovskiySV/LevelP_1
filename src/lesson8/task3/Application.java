@@ -1,10 +1,12 @@
 package lesson8.task3;
 
+import java.util.ArrayList;
+
 public class Application {
 
     public static void main(String[] args) {
 
-        DynamicArray dynamicArray = new DynamicArray();
+        DynamicArray<String> dynamicArray = new DynamicArray<>(3);
         for (int i = 0; i < 12; i++) {
             dynamicArray.add("Str"+i);
         }
@@ -22,28 +24,20 @@ public class Application {
 
         System.out.println();
 
-   /*     OneWayList oneWayList = new OneWayList();
-        oneWayList.add(34);
-        oneWayList.add(54);
-        oneWayList.add(42);
-        oneWayList.add(75);
-        oneWayList.add(54);
-        oneWayList.add(56);
-        oneWayList.add(73);
-        oneWayList.add(72);
-        oneWayList.add(71);
-        oneWayList.add(23);
+        OneWayList<String> oneWayList = new OneWayList<>();
+        for (int i = 0; i < 12; i++) {
+            oneWayList.add("Str"+i);
+        }
         System.out.println(oneWayList.toString());
-        oneWayList.remove(34);
-        oneWayList.remove(75);
-        oneWayList.remove(23);
-        oneWayList.remove(999);
+        oneWayList.remove("Str0");
+        oneWayList.remove("Str4");
+        oneWayList.remove("Str11");
+        oneWayList.remove("Trololo");
         System.out.println(oneWayList.toString());
         oneWayList.removeByIndex(0);
         oneWayList.removeByIndex(2);
-        oneWayList.removeByIndex(4);
-        oneWayList.removeByIndex(999);
-        System.out.println(oneWayList.toString());*/
+        oneWayList.removeByIndex(oneWayList.size-1);
+        System.out.println(oneWayList.toString());
     }
 
 }

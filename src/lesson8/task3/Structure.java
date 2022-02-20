@@ -1,12 +1,12 @@
 package lesson8.task3;
 
-public interface Structure {
+public interface Structure<T> {
 
     int MAX_CAPACITY = 10;
 
-    void add(Object value);
+    void add(T value);
 
-    void remove(Object value);
+    void remove(T value);
 
     void removeByIndex(int index);
 

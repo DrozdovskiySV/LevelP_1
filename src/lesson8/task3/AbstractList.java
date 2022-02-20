@@ -3,14 +3,13 @@ package lesson8.task3;
 // Абстрактный класс
 //  1. Нельзя создать объект данного класса
 //  2. Абстрактный класс может иметь абстрактные методы
-public abstract class AbstractList implements Structure {
+public abstract class AbstractList<T> implements Structure<T> {
 
     protected int size;
 
-    public abstract void add(Object value);
+    public abstract void add(T value);
 
-    // addArray(int[] array)
-    public void addArray(Object[] array) {
+    public void addArray(T[] array) {
         for (int i = 0; i < array.length; i++) {
             add(array[i]);
         }

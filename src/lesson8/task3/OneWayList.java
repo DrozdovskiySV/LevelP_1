@@ -1,12 +1,12 @@
 package lesson8.task3;
 
 // Однонаправленный связный список
-public class OneWayList extends AbstractList {
+public class OneWayList<T> extends AbstractList<T> {
 
     private ListElement head;
 
     @Override
-    public void add(Object value) {
+    public void add(T value) {
         ListElement el = new ListElement(value);
         if (head == null) {
             head = el;
@@ -35,13 +35,14 @@ public class OneWayList extends AbstractList {
     }
 
     @Override
-    public void remove(Object value) {
+    public void remove(T value) {
         ListElement el = head;
         ListElement elPrev = null;
         while (el != null) {
             if (el.getValue().equals(value)) {
                 if (el == head) head = el.getNext();
                 else elPrev.setNext(el.getNext());
+                size--;
                 break;
             }
             else {
@@ -60,6 +61,7 @@ public class OneWayList extends AbstractList {
             if (ind == index) {
                 if (el == head) head = el.getNext();
                 else elPrev.setNext(el.getNext());
+                size--;
                 break;
             }
             else {

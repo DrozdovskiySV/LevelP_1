@@ -1,17 +1,20 @@
 package lesson8.task3;
 
-public class DynamicArray extends AbstractList {
+import java.lang.reflect.Array;
+
+public class DynamicArray<T> extends AbstractList<T> {
 
     private Object[] elements;
 
-    public DynamicArray() {
-        this.elements = new Object[3];
+    public DynamicArray(int initSize) //Class<T> classType, int initSize
+    {
+        this.elements = new Object[initSize]; //(T[]) Array.newInstance(classType, initSize);
         this.size = 0;
     }
 
     // Добавляет элемент в спиок (в конец списка)
     @Override
-    public void add(Object value) {
+    public void add(T value) {
         if (elements.length == size) {
             ensureCapacity();
         }
@@ -20,7 +23,7 @@ public class DynamicArray extends AbstractList {
     }
 
     // Добавляет элемент в начало списка
-    public void addFirst(Object value) {
+    public void addFirst(T value) {
         if (elements.length == size) {
             ensureCapacity();
         }
@@ -45,7 +48,7 @@ public class DynamicArray extends AbstractList {
     }
 
     @Override
-    public void remove(Object value) {
+    public void remove(T value) {
         for (int i = 0; i < size; i++) {
             if (elements[i].equals(value)) {
                 if (i+1 != size) System.arraycopy(elements, i+1, elements, i, size - i-1);

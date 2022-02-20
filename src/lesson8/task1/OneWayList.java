@@ -52,6 +52,7 @@ public class OneWayList extends AbstractList {
             if (el.getValue() == value) {
                 if (el == head) head = el.getNext();
                 else elPrev.setNext(el.getNext());
+                size--;
                 break;
             }
             else {
@@ -70,6 +71,7 @@ public class OneWayList extends AbstractList {
             if (ind == index) {
                 if (el == head) head = el.getNext();
                 else elPrev.setNext(el.getNext());
+                size--;
                 break;
             }
             else {
